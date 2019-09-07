@@ -1,10 +1,62 @@
-@font-face{
-	font-family: raleway-light;
-	src: url(../fonts/raleway-light.ttf);
+@font-face {
+    font-family: 'raleway-extrabold';
+    src: url('../fonts/raleway/raleway-extrabold-webfont.eot');
+    src: url('../fonts/raleway/raleway-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway/raleway-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway/raleway-extrabold-webfont.woff') format('woff');
+         // url('raleway-extrabold-.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
 }
-@font-face{
-	font-family: raleway-regular;
-	src: url('../fonts/raleway-regular.ttf');
+@font-face {
+    font-family: 'raleway-light';
+    src: url('../fonts/raleway/raleway-light-webfont.eot');
+    src: url('../fonts/raleway/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway/raleway-light-webfont.woff2') format('woff2'),
+         url('../fonts/raleway/raleway-light-webfont.woff') format('woff');
+         // url('raleway-light.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'raleway-medium';
+    src: url('../fonts/raleway/raleway-medium-webfont.eot');
+    src: url('../fonts/raleway/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway/raleway-medium-webfont.woff2') format('woff2'),
+         url('../fonts/raleway/raleway-medium-webfont.woff') format('woff');
+         // url('raleway-medium.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'raleway-regular';
+    src: url('../fonts/raleway/raleway-regular-webfont.eot');
+    src: url('../fonts/raleway/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway/raleway-regular-webfont.woff2') format('woff2'),
+         url('../fonts/raleway/raleway-regular-webfont.woff') format('woff');
+         // url('raleway-regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'raleway-semibold';
+    src: url('../fonts/raleway/raleway-semibold-webfont.eot');
+    src: url('../fonts/raleway/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway/raleway-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway/raleway-semibold-webfont.woff') format('woff');
+         // url('raleway-semibold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat/montserrat-light-webfont.eot');
+    src: url('../fonts/montserrat/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/montserrat-light-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-light-webfont.woff') format('woff');
+         // url('montserrat-light.otf') format('otf';)
+    font-weight: normal;
+    font-style: normal;
 }
 .container{
 	margin: 0 auto;
@@ -13,50 +65,163 @@
 .page-header{
 	width: 100%;
 	min-height: 1024px;
-	outline: 1px solid red;
+	padding: 40px 150px 0px 150px;
 	background-image: url('../img/headerbg.jpg');
+	box-sizing: border-box;
+}
+#logo-svg{
+	width: 64px;
+	height: 56px;
 }
 .logo-link{
 	text-decoration: none;
-	outline: 1px solid black;
 	float: left;
 	display: flex;
  	align-items: center;
-	font-family: raleway-light;
+	font-family: raleway-light, verdana, sans-serif;;
 	font-size: 34px;
 	line-height: 1.2;
 	font-weight: 400;
 	letter-spacing: -0.04em;
 	color: #ffffff;
 }
-#logo-svg{
-	width: 64px;
-	height: 56px;
+.header_top_section{
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 150px 300px 150px;
 }
-.container{
-	margin: 0 auto;
-	width: 1920px;
+.menu{
+	display: flex;
+		.nav_menu_link{
+			text-decoration: none;
+			font-family: montserrat, verdana, sans-serif;;
+			font-size: 14px;
+			line-height: 1.2;
+			font-weight: 300;
+			color: #ffffff;
+			margin: 5px 30px 0px 0px;
+			&:hover{
+				color: darken(#ffffff, 15%);
+			}
+			&:active{
+				color: darken(#ffffff, 30%);
+			}
+		}
+		.nav_menu_opend-page{
+			text-decoration: none;
+			font-family: montserrat, verdana, sans-serif;
+			font-size: 14px;
+			line-height: 1.2;
+			font-weight: 300;
+			color: #c7b299;
+			margin: 5px 30px 0px 0px;
+			&:hover{
+				color: saturate(#c7b299, 30%);
+			}
+			&:active{
+				color: saturate(#c7b299, 50%);
+			}
+		}
 }
-.page-header{
+.header_btn_basket{
+	width: 19px;
+	height: 26px;
+	background: url('../img/header_basket.svg') no-repeat 0 0;
+    border: none;
+    padding: 0;
+    outline: none;
+    margin: 0px 28px 0px 32px;
+}
+.header_bottom_section{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+.header_left-btn{
+	background: url('../img/header_left_btn.svg') no-repeat 0 0;
+    border: none;
+    padding: 0;
+    outline: none;
+    width: 40px;
+	height: 73px;
+	&:hover{
+		background: #ffffff;
+	}
+	&:active{
+		background: green;
+	}
+}
+.header_right-btn{
+	background: url('../img/header_rght_btn.svg') no-repeat 0 0;
+    border: none;
+    padding: 0;
+    outline: none;
+    width: 40px;
+	height: 73px;
+	&:hover{
+		background: red;
+	}
+	&:active{
+		background: green;
+	}
+}
+.header_text{
+	width: 679px;
+	text-align: center;
+}
+.unique{
+	height: 34px;
+	font-family: raleway-medium, verdana, sans-serif;;
+	font-size: 40px;
+	line-height: 1.2;
+	font-weight: 500;
+	color: #ffffff;
+	margin: 0px 0px 24px 0px;
+	display: block;
+}
+.portfolio{
 	width: 100%;
-	min-height: 1024px;
-	outline: 1px solid red;
-	background-image: url('../img/headerbg.jpg');
-}
-.logo-link{
-	text-decoration: none;
-	outline: 1px solid black;
-	float: left;
-	display: flex;
- 	align-items: center;
-	font-family: raleway-light;
-	font-size: 34px;
+	font-family: raleway-bold, verdana, sans-serif;
+	font-size: 52px;
 	line-height: 1.2;
-	font-weight: 400;
-	letter-spacing: -0.04em;
+	font-weight: 800;
 	color: #ffffff;
+	margin: 0px 0px 30px 0px;
+	display: block;
 }
-#logo-svg{
-	width: 64px;
-	height: 56px;
+.header_div_text{
+	width: 666px;
+	font-family: montserrat, verdana, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 300;
+	color: #ffffff;
+	display: block;
+	margin: 0 auto;
+}
+.header_bottom_section > div > a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	margin: 50px auto;
+	width: 170px;
+	height: 53px;
+	background-color: #998675;
+	border-radius: 3.0px;
+	font-family: raleway-bold, verdana, sans-serif;
+	font-size: 14px;
+	line-height: 23px;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #ffffff;
+	&:hover{
+		background: lighten(#998675, 15%);
+		color: darken(#ffffff, 80%);
+	}
+	&:active{
+		background: lighten(#998675, 20%);
+		color: darken(#ffffff, 95%);
+	}
 }
